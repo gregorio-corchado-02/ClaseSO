@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="RegistrarUsuarios.css">
+  <title>Formulario Registro</title>
+</head>
+<body>
+    <form class="form-register" action="/guardar" method="POST">
+        <h1>Formulario Registro</h1>
+        <input class="controls" type="text" name="txtnombre" id="nombres" placeholder="Ingrese su Nombre">
+        <input class="controls" type="text" name="txtusuario" id="Usuario" placeholder="Ingrese su Usuario">
+        <input class="controls" type="email" name="txtcorreo" id="correo" placeholder="Ingrese su Correo">
+        <input class="controls" type="password" name="txtcontraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+        <input class="botons" type="submit" value="Registrar">
+        <p><a href="/iniciars">¿Ya tengo Cuenta?</a></p>
+      </form>
+
+</body>
+</html>

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename = 'favicon.png') }}">
-    <title>Listar registros con Flask y Python desde MySQL</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.min.css') }}">
+    <title>Lista de autos recomendados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
     <style>
         h2{
             display: flex;
@@ -19,12 +19,12 @@
 <body>
    
     
-    <div class="container">
+    <div class="container" action="/mostrar" method="post" method="get">
 
         <div class="row">
             <div class="column">
                 <h2 class="text-center">
-                    Listar Registros con Flask y Python 🐍 desde MySQL 💥
+                    Lista de autos recomendados
                 </h2>
                 <hr>
             </div>
@@ -33,7 +33,7 @@
           <h3>Total de registros {{ dataTotal }}</h3>
         <div class="row">
             
-        <!-- {{ dataAutos }} -->
+
         {% if (dataAutos) %}
 
             <table>
@@ -47,14 +47,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                    {% for autos in dataAutos %}    
+                    {% for autos in dataAutos %} 
+                        
                         <tr>
-                            <td>{{ id_auto }}</td>
-                            <td>{{ modelo }}</td>
-                            <td>{{ autos.marca }}</td>
-                    
-                            <td>{{ autos.precio }}</td>
-                            <td>{{ autos.anio }} </td>
+                            <td>{{ autos[0] }}</td>
+                            <td>{{ autos[1] }}</td>
+                            <td>{{ autos[2] }}</td>
+                            <td>{{ autos[3] }}</td>
+                            <td>{{ autos[4] }} </td>
                         </tr>
                     {% endfor %}
                 </tbody>
